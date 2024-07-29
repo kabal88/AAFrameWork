@@ -2,7 +2,7 @@
 
 namespace AAFrameWork.Unity.Debug
 {
-    public static class DebugDispatcher
+    public static partial class DebugDispatcher
     {
         public static void Log(string info)
         {
