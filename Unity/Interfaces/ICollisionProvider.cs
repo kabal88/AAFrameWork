@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Interfaces
+namespace AAFramework.Unity.Identifiers
 {
     public interface ICollisionProvider
     {

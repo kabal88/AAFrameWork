@@ -1,4 +1,4 @@
-﻿using Interfaces;
+﻿using AAFramework.Unity.Identifiers;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Descriptions;

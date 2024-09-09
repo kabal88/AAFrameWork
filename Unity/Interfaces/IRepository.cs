@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interfaces
+namespace AAFramework.Unity.Identifiers
 {
     public interface IRepository<T> where T : class
     {

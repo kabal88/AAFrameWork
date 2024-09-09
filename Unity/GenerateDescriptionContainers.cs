@@ -3,7 +3,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace KabalFramework.Unity.Generator
+namespace AAFramework.Unity.Generator
 {
     public class GenerateDescriptionContainers : Editor
     {

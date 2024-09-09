@@ -1,4 +1,4 @@
-﻿namespace Interfaces
+﻿namespace AAFramework.Unity.Identifiers
 {
     public interface IIdentifier
     {

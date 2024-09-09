@@ -2,7 +2,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Identifier
+namespace AAFramework.Unity.Identifiers
 {
     [CreateAssetMenu(fileName = "identifier", menuName = "Identifiers/Identifier")]
     public class IdentifierContainer : ScriptableObject, IIdentifier

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Identifier
+namespace AAFramework.Unity.Identifiers
 {
     public static class IndexGenerator
     {

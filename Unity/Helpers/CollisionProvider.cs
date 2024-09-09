@@ -1,5 +1,5 @@
 ﻿using System;
-using Interfaces;
+using AAFramework.Unity.Identifiers;
 using UnityEngine;
 
 namespace Components

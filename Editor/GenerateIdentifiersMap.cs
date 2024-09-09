@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Identifier;
-using KabalFramework.Core.Generator;
+using AAFramework.Core.Generator;
+using AAFramework.Unity.Identifiers;
 using UnityEditor;
 using UnityEngine;
 
-namespace KabalFramework.Core.CodeGenerator
+namespace AAFramework.Core.CodeGenerator
 {
     public class GenerateIdentifiersMap : Editor
     {

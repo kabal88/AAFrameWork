@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace KabalFramework.Core.Generator
+namespace AAFramework.Core.Generator
 {
     public static class CParse
     {

@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using AAFramework.Core.Generator;
 using Helpers;
-using KabalFramework.Core.Generator;
-using Unity.VisualScripting;
-using IDescription = Interfaces.IDescription;
 
-namespace KabalFramework.Core.CodeGenerator
+namespace AAFramework.Core.CodeGenerator
 {
     public partial class CodeGenerator
     {
@@ -22,7 +20,7 @@ namespace KabalFramework.Core.CodeGenerator
 
         public void GatherAssembly()
         {
-            var descriptionType = typeof(IDescription);
+            var descriptionType = typeof(Unity.Identifiers.IDescription);
 
             Assembly = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes());
             descriptionTypes = Assembly.Where(p =>

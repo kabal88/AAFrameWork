@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace KabalFramework.Core.Generator
+namespace AAFramework.Core.Generator
 {
     public interface ISyntax
     {

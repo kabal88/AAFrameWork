@@ -4,7 +4,7 @@ using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace KabalFramework.Debug
+namespace AAFramework.Debug
 {
     public partial class CheatWindow : OdinEditorWindow
     {
