@@ -43,7 +43,7 @@ namespace Services
             return obj != null;
         }
         
-        public void UpdateLocal(float deltaTime)
+        public void UpdateLocal()
         {
             for (int i = 0; i < addUpdatables.Count; i++)
             {
@@ -59,7 +59,7 @@ namespace Services
             {
                 if (updatables[i].IsAlive)
                 {
-                    updatables[i].UpdateLocal(deltaTime);
+                    updatables[i].UpdateLocal();
                 }
             }
         }

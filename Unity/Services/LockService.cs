@@ -30,7 +30,7 @@ namespace Services
             return Lockers.Where(predicate);
         }
 
-        public virtual void UpdateLocal(float deltaTime)
+        public virtual void UpdateLocal()
         {
             for (int i = 0; i < AddLockers.Count; i++)
             {

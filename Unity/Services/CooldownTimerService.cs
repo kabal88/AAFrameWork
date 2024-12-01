@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AAFramework.Unity.Identifiers;
+using UnityEngine;
 
 namespace Services
 {
@@ -30,7 +31,7 @@ namespace Services
             return cooldowns.Where(predicate);
         }
 
-        public void UpdateLocal(float deltaTime)
+        public void UpdateLocal()
         {
             for (int i = 0; i < addCooldowns.Count; i++)
             {
@@ -53,7 +54,7 @@ namespace Services
 
                 if (cooldown.CurrentTime > 0)
                 {
-                    cooldown.ChangeCooldown(-deltaTime);
+                    cooldown.ChangeCooldown(-Time.deltaTime);
                 }
                 else
                 {
