@@ -9,7 +9,7 @@ using UnityEngine;
 namespace Libraries
 {
     [Serializable]
-    public partial class Library
+    public partial class DescriptionsLibrary
     {
         [SerializeField] private List<Description> Descriptions = new();
         
