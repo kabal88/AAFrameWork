@@ -9,7 +9,7 @@ namespace AAFramework.Core.CodeGenerator
     public partial class CodeGenerator
     {
         private const string Container = "Container";
-        private const string Library = "Library";
+        private const string Library = "DescriptionsLibrary";
         private const string Description = "Description";
         private const string Descriptions = "Descriptions";
 
