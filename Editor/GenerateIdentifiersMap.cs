@@ -96,7 +96,7 @@ namespace AAFramework.Core.CodeGenerator
             foreach (var identifier in identifierContainers)
             {
                 var name = identifier.name.Replace("Container", "");
-                body.Add(new TabSimpleSyntax(1, $"public static int {name} => {identifier.Id};"));
+                body.Add(new TabSimpleSyntax(1, $"public const int {name} = {identifier.Id};"));
             }
 
             return composeIdentifiersMap.ToString();
