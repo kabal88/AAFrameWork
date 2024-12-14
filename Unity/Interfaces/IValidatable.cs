@@ -1,4 +1,4 @@
-﻿namespace AAFramework.Unity.Identifiers
+﻿namespace AAFramework.Interfaces
 {
     public interface IValidatable
     {
