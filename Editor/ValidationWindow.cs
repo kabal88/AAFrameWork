@@ -69,7 +69,11 @@ public partial class ValidationWindow : OdinEditorWindow
 
         if (success)
         {
-            Debug.Log($"Validation successful. Checked as IValidatable {monoCount} MonoBehaviour and {soCount} scriptable objects.");
+            Debug.Log($"Validation successful. Checked as IValidatable {monoCount}({objectsOnScene.Length}) MonoBehaviour and {soCount}({soInProject.Count}) scriptable objects.");
+        }
+        else
+        {
+            Debug.LogError($"Validation failed. Checked as IValidatable {monoCount}({objectsOnScene.Length}) MonoBehaviour and {soCount}({soInProject.Count}) scriptable objects.");
         }
     }
 }
