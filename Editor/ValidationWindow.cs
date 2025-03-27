@@ -5,6 +5,7 @@ using AAFramework.Interfaces;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public partial class ValidationWindow : OdinEditorWindow
@@ -63,6 +64,26 @@ public partial class ValidationWindow : OdinEditorWindow
                     hasValidationErrors = true;
                     success = false;
                     soValidationErrors.Add(so);
+                }
+            }
+        }
+        
+        var prefabStage = PrefabStageUtility.GetCurrentPrefabStage();
+        if (prefabStage != null)
+        {
+            var prefabRoot = prefabStage.prefabContentsRoot;
+            var prefabObjects = prefabRoot.GetComponentsInChildren<MonoBehaviour>(true);
+            foreach (var o in prefabObjects)
+            {
+                if (o is IValidatable validatable)
+                {
+                    monoCount++;
+                    if (!validatable.Validate())
+                    {
+                        hasValidationErrors = true;
+                        success = false;
+                        monoValidationErrors.Add(o);
+                    }
                 }
             }
         }
