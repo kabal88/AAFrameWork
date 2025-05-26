@@ -20,6 +20,9 @@ namespace AAFramework.Unity.Identifiers
         public static int GetIndexForType(string typeName)
         {
             var lenght = typeName.Length;
+            if (lenght <= 0)
+                return -1;
+            
             var index = lenght + typeName[0].GetHashCode();
 
             for (var i = 0; i < lenght; i++)
