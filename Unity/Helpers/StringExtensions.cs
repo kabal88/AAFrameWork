@@ -29,5 +29,30 @@ namespace Helpers
 
             return result;
         }
+        
+        public static string Bold(this string str)
+        {
+            return "<b>" + str + "</b>";
+        }
+
+        public static string Color(this string str, string clr)
+        {
+            return $"<color={clr}>{str}</color>";
+        }
+
+        public static string Italic(this string str)
+        {
+            return "<i>" + str + "</i>";
+        }
+
+        public static string Size(this string str, int size)
+        {
+            return $"<size={size}>{str}</size>";
+        }
+
+        public static string NextLine(this string str)
+        {
+            return str + "\n";
+        }
     }
 }
