@@ -82,10 +82,8 @@ namespace AAFramework.Core.CodeGenerator
 
             tree.Add(new NameSpaceSyntax("Libraries"));
             tree.Add(new LeftScopeSyntax());
-            // tree.Add(new TabSimpleSyntax(1, "[Serializable]"));
             tree.Add(new TabSimpleSyntax(1, $"public partial class {Library}"));
             tree.Add(new LeftScopeSyntax(1));
-            // tree.Add(new TabSimpleSyntax(2, $"[SerializeField] private List<{Description}> {Descriptions} = new();"));
             tree.Add(new ParagraphSyntax());
             tree.Add(dictionaries);
             tree.Add(new ParagraphSyntax());
@@ -111,6 +109,7 @@ namespace AAFramework.Core.CodeGenerator
             foreach (var type in interfaces)
             {
                 methods.Add(GetGetterMethod(type));
+                methods.Add(GetGetterForAllMethod(type));
             }
 
             return tree.ToString();
@@ -161,6 +160,22 @@ namespace AAFramework.Core.CodeGenerator
             getterMethod.Add(new RightScopeSyntax(3));
             getterMethod.Add(new TabSimpleSyntax(3,
                 $"throw new Exception({CParse.Quote}{typeName} description with id {CParse.Quote} + id + {CParse.Quote} not found{CParse.Quote});"));
+            getterMethod.Add(new RightScopeSyntax(2));
+
+            return getterMethod;
+        }
+        
+        private ISyntax GetGetterForAllMethod(Type type)
+        {
+            var getterMethod = new TreeSyntaxNode();
+            
+            var typeName = type.Name.Remove(0, 1);
+            
+            var dictionaryName = typeName.ToCamelCase() + "s";
+
+            getterMethod.Add(new TabSimpleSyntax(2, $"public IEnumerable<{type.Name}> GetAll{typeName}s()"));
+            getterMethod.Add(new LeftScopeSyntax(2));
+            getterMethod.Add(new TabSimpleSyntax(3, $"return {dictionaryName}.Values;"));
             getterMethod.Add(new RightScopeSyntax(2));
 
             return getterMethod;
